@@ -1,5 +1,5 @@
-#include "u32.h"
-#include "element.h"
+#include "../variables/u32.h"
+#include "../element.h"
 #include <cstdint>
 #pragma once
 

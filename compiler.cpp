@@ -1,9 +1,10 @@
 #include <string>
 #include <fstream>
 #include <cstdint>
-#include "u32.h"
-#include "i32.h"
-#include "typeSection.h"
+#include "elements/variables/u32.h"
+#include "elements/variables/i32.h"
+#include "./elements/sections/typeSection.h"
+#include "./elements/sections/functionSection.h"
 #define SWAP_INT32(x) (((x) >> 24) | (((x) & 0x00FF0000) >> 8) | (((x) & 0x0000FF00) << 8) | ((x) << 24))
 int main(int argc, char* argv[]){
     std::string outFilename="output.wasm";
@@ -36,6 +37,11 @@ int main(int argc, char* argv[]){
     TypeSection tsection{ftsVec};
     o_file<<tsection.pack();
     
+    std::vector<u32> funcidx{u32(0)};
+    vec<u32> functionVec{funcidx};
+    FunctionSection funcSec{functionVec};
+    o_file<<funcSec.pack();
+
 
     o_file.close();
 

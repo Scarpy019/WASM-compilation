@@ -1,5 +1,5 @@
-#include "element.h"
-#include "vec.h"
+#include "../element.h"
+#include "../variables/vec.h"
 #pragma once
 class resulttype : public element
 {

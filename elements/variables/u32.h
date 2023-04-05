@@ -1,6 +1,6 @@
 #include "number.h"
 #include <cstdint>
-#include "valtype.h"
+#include "../types/valtype.h"
 #pragma once
 
 class u32:public number

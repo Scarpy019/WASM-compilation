@@ -1,4 +1,4 @@
-#include "element.h"
+#include "../element.h"
 #include "resulttype.h"
 #pragma once
 class funcType : public element

@@ -1,7 +1,7 @@
 #include "section.h"
-#include "element.h"
-#include "vec.h"
-#include "funcType.h"
+#include "../element.h"
+#include "../variables/vec.h"
+#include "../types/funcType.h"
 #pragma once
 class TypeSectionContent:public element{
 private:
